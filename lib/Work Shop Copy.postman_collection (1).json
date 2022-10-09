@@ -1,0 +1,1560 @@
+{
+	"info": {
+		"_postman_id": "852f32e2-fcad-42c9-b9e8-e1a0a322f958",
+		"name": "Work Shop Copy",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22722164"
+	},
+	"item": [
+		{
+			"name": "Application Info",
+			"item": [
+				{
+					"name": "FAQs",
+					"item": [
+						{
+							"name": "GET All FAQs",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0c3Nzd0BxYS5jb20iLCJleHAiOjE2NTA0ODE0MjUsImlhdCI6MTY1MDQ2MzQyNX0.YNKCctxd_ogllFyE88tmqSdpabQRvhKd8LZamvqgGy_16eQeZWxYTYGxFBj3Q9CJRkqb24ouueezSTlMel7tfw",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"mkd\":\"jdsmn,\r\n\r\n\"jdf\":\"DFDF\"\r\n}"
+								},
+								"url": {
+									"raw": "{{url}}/faq",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"faq"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "POST One FAQ",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "question",
+											"value": "<h4>Qd</h4>",
+											"type": "text"
+										},
+										{
+											"key": "answer",
+											"value": "<h4>av</h4>",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/faq",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"faq"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "DELETE One FAQ With Id",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/faqs/1",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"faqs",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Terms Copy",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/terms",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"terms"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "News",
+			"item": [
+				{
+					"name": "Add One Piece of News",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "title",
+									"value": "Mo Salah is attending",
+									"type": "text"
+								},
+								{
+									"key": "body",
+									"value": "Mo Salah",
+									"type": "text"
+								},
+								{
+									"key": "date",
+									"value": "2019-07-28",
+									"type": "text"
+								},
+								{
+									"key": "image_url",
+									"value": "https://play-lh.googleusercontent.com/-smPXoVzlic3GMM72ylVgFr2sPM4qr-yLdrhpDyvWvBmb-aimEKOfDw83eBzlVUhWMzt=s360-rw",
+									"type": "text"
+								},
+								{
+									"key": "link_url",
+									"value": "https://play.google.com/store/apps/details?id=auc.edu&hl=en_US&gl=US",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/news",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"news"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get One News Entity With Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/news/2",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"news",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All News",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/news",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"news"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All News By Date",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/news?date=2019-07-28",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"news"
+							],
+							"query": [
+								{
+									"key": "date",
+									"value": "2019-07-28"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete One News Entity With Id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/news/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"news",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Authentication",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "s@qsa.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "0012xdsAa34563333333333337",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "Teacher assistantt",
+									"type": "text"
+								},
+								{
+									"key": "gender",
+									"value": "m",
+									"type": "text"
+								},
+								{
+									"key": "phoneNumber",
+									"value": "01234567890",
+									"type": "text"
+								},
+								{
+									"key": "universityId",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "gradeId",
+									"value": "4",
+									"type": "text"
+								},
+								{
+									"key": "roleId",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "0012xdsAa34563333333333337",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/register",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "ta@qsa.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "0012xdsAa34563333333333337",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/login",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Current User Details",
+			"item": [
+				{
+					"name": "Admin",
+					"item": [
+						{
+							"name": "Get Admin Details",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/user/admin",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"user",
+										"admin"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Teacher",
+					"item": [
+						{
+							"name": "Get Current Teacher Lectures",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0c3Nzd3d3d3dxQHFzYS5jb20iLCJleHAiOjE2NTIwMzAxNDUsImlhdCI6MTY1MjAxMjE0NX0.09J-uKpsTSXYHzYJJ8fuXVgEJlU3nv4xOAcd6EKcFaji52CsA3NawtSvP0X97nSMHplHj4ytYnvnej7hQpFZNQ",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"url": {
+									"raw": "{{url}}/user/teacher/lectures",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"user",
+										"teacher",
+										"lectures"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Current Teacher Details",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/user/teacher",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"user",
+										"teacher"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Calender",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{url}}/user/teacher/calender",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"user",
+										"teacher",
+										"calender"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "TA",
+					"item": [
+						{
+							"name": "Get Current TA Sections",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0c3Nzd3d3d3dxQHFzYS5jb20iLCJleHAiOjE2NTIwMzAxNDUsImlhdCI6MTY1MjAxMjE0NX0.09J-uKpsTSXYHzYJJ8fuXVgEJlU3nv4xOAcd6EKcFaji52CsA3NawtSvP0X97nSMHplHj4ytYnvnej7hQpFZNQ",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"url": {
+									"raw": "{{url}}/user/ta/sections",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"user",
+										"ta",
+										"sections"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Current TA Details",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0c3Nzd3d3d3dxQHFzYS5jb20iLCJleHAiOjE2NTIwMzAxNDUsImlhdCI6MTY1MjAxMjE0NX0.09J-uKpsTSXYHzYJJ8fuXVgEJlU3nv4xOAcd6EKcFaji52CsA3NawtSvP0X97nSMHplHj4ytYnvnej7hQpFZNQ",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"url": {
+									"raw": "{{url}}/user/ta",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"user",
+										"ta"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Calender",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/user/ta/calender",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"user",
+										"ta",
+										"calender"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Student",
+					"item": [
+						{
+							"name": "Get Current Student Lectures",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0c3Nzd3d3d3dxQHFzYS5jb20iLCJleHAiOjE2NTIwMzAxNDUsImlhdCI6MTY1MjAxMjE0NX0.09J-uKpsTSXYHzYJJ8fuXVgEJlU3nv4xOAcd6EKcFaji52CsA3NawtSvP0X97nSMHplHj4ytYnvnej7hQpFZNQ",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"url": {
+									"raw": "{{url}}/user/student/lectures",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"user",
+										"student",
+										"lectures"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Current Student Sections",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0c3Nzd3d3d3dxQHFzYS5jb20iLCJleHAiOjE2NTIwMzAxNDUsImlhdCI6MTY1MjAxMjE0NX0.09J-uKpsTSXYHzYJJ8fuXVgEJlU3nv4xOAcd6EKcFaji52CsA3NawtSvP0X97nSMHplHj4ytYnvnej7hQpFZNQ",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"url": {
+									"raw": "{{url}}/user/student/sections",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"user",
+										"student",
+										"sections"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Current Student Exams",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0c3Nzd3d3d3dxQHFzYS5jb20iLCJleHAiOjE2NTIwMzAxNDUsImlhdCI6MTY1MjAxMjE0NX0.09J-uKpsTSXYHzYJJ8fuXVgEJlU3nv4xOAcd6EKcFaji52CsA3NawtSvP0X97nSMHplHj4ytYnvnej7hQpFZNQ",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"url": {
+									"raw": "{{url}}/user/student/exams",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"user",
+										"student",
+										"exams"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Current Student Details",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/user/student",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"user",
+										"student"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Calender",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/user/student/calender",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"user",
+										"student",
+										"calender"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Current User",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/user",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"user"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Subject",
+			"item": [
+				{
+					"name": "Add One Subject",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "subject",
+									"value": "Flutter",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/subject",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"subject"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Subjects",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/subject",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"subject"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get One Subject With Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/subject/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"subject",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete One Section With Id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/subject/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"subject",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Lectuers",
+			"item": [
+				{
+					"name": "Add One Lecture",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "subjectId",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "start_time",
+									"value": "06:00",
+									"type": "text"
+								},
+								{
+									"key": "end_time",
+									"value": "06:27",
+									"type": "text"
+								},
+								{
+									"key": "date",
+									"value": "2022-05-11",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/lectures",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"lectures"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Lectures",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/lectures",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"lectures"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Lectures By Date",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/lectures?date=2022-06-01",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"lectures"
+							],
+							"query": [
+								{
+									"key": "date",
+									"value": "2022-06-01"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get One Lecture With Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/lectures/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"lectures",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete One Lecture With Id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/lectures/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"lectures",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Exams",
+			"item": [
+				{
+					"name": "Add One Exam",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "subjectId",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "startTime",
+									"value": "06:00",
+									"type": "text"
+								},
+								{
+									"key": "endTime",
+									"value": "06:27",
+									"type": "text"
+								},
+								{
+									"key": "date",
+									"value": "2022-05-11",
+									"type": "text"
+								},
+								{
+									"key": "final",
+									"value": "true",
+									"type": "text"
+								},
+								{
+									"key": "gradeId",
+									"value": "4",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/exams",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"exams"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Exams",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/exams",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"exams"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Exams By Date",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/exams?date=2022-05-11",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"exams"
+							],
+							"query": [
+								{
+									"key": "date",
+									"value": "2022-05-11"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get One Exam With Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/exams/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"exams",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete One Exam With Id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/exams/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"exams",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Sections",
+			"item": [
+				{
+					"name": "Add One Section",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "subjectId",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "startTime",
+									"value": "06:00",
+									"type": "text"
+								},
+								{
+									"key": "endTime",
+									"value": "06:27",
+									"type": "text"
+								},
+								{
+									"key": "date",
+									"value": "2022-05-11",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/sections",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"sections"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Sections",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/sections",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"sections"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Sections By Date",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/sections?date=2022-05-11",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"sections"
+							],
+							"query": [
+								{
+									"key": "date",
+									"value": "2022-05-11"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get One Section With Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/sections/7",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"sections",
+								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete One Section With Id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/sections/7",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"sections",
+								"7"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Teach",
+			"item": [
+				{
+					"name": "Get Teaches",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/teach",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"teach"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Teach With Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/teach/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"teach",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Teach",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "lectureId",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "sectionId",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "teacherAssistantId",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "lecturerId",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "gradeId",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "universityId",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/teach",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"teach"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Teach With Id Copy",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/teach/6",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"teach",
+								"6"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "University",
+			"item": [
+				{
+					"name": "Get University",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/university",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"university"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get University With Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/university/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"university",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add University",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "AUC",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/university",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"university"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get University With Id Copy",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/university/4",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"university",
+								"4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Grade",
+			"item": [
+				{
+					"name": "Get Grade",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/grade",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"grade"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Grade With Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/grade/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"grade",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Grade",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "grade",
+									"value": "6",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/grade",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"grade"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/grade/8",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"grade",
+								"8"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Role",
+			"item": [
+				{
+					"name": "Get Role",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/role",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"role"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get RoleWith Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/role/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"role",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Role",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "sub admin",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/role",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"role"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Role With Id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/role/7",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"role",
+								"7"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTcsInJvbGUiOjQsImlhdCI6MTY2MTg3OTkwOSwiZXhwIjoxNzQ4Mjc5OTA5fQ.ME2mIoddrS2zNiveNhg2cezMxKpqC0j6KUzbxIIcsU0",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

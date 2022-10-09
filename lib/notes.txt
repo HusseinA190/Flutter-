@@ -1,0 +1,299 @@
+++ every main widget must start with (MaterialApp)
+
+++ every things in flutter is a class and a widgets 
+
+++ "Widget build(BuildContext context)" -> this functions is responsible for draw the content on the screen and reload it also and it returns as we see a widget :
+-->> @override
+    Widget build(BuildContext context){
+        return MaterialApp(
+            home:,
+            body:,
+            floatActionbutton,
+        )
+    }
+
+++ MaterialApp acts like the root window for screen 
+and it's consists of following :
+        MaterialApp(
+            home:,
+            body:,
+            floatActionbutton,
+        )
+++ Also This line : " import 'package:flutter/material.dart'; " is important for initializing flutter on the file
+
+
+++ after we vreate home in materialApp we create Scaffold screen that's initializing the layout of screen into three main things :
+1- appBar 
+2- body
+3- floatActionbutton
+
+++ singlechildscrollview : to view inouts and view the content if it dosen't appear 
+
+++ " TextField " -> for creating input_field
+  -- child:TextField(
+    decoration --> for putting the attributes of the input field 
+    InputDecoration(
+        LabelText:"----",
+        LabelStyle: TextStyle(),
+        KeyboardType: InputTextType.type of the field 
+    )
+  )
+++ also we use margin:EdgeInsets.all(value) => for adding margin to all corners of the field 
+
+++  " obsecureText " => to secure the password field from being appeard like stars "*"
+
+++ color:Color.fromRGBO(r,g,b,opacity)
+
+++ color:Colors.color_name
+
+++ for every row or column it's consists of children: [
+
+]
+
+not child as we for others
+
+++ alignment : Alignment.center
+
+++
+inside text('',
+style:TextStyle(
+    fontWeight:FontWeight.bold,
+    fontSize:value,
+    letterSpacing:value,
+    wordSpacing:value,
+    height:value
+
+++ Buttons :
+    -- TextButton(onPresses:(){},child:child)
+    -- ElevatedButton(onPresses:(){},child:child)
+    -- OutlinedButton(onPresses:(){},child:child)
+
+++ Buttons With Icons:
+    -- TextButton(onPresses:(){},label:child,icon:Icon(Icons.add))
+    -- ElevatedButton(onPresses:(){},label:child,icon:Icon(Icons.add))
+    -- OutlinedButton(onPresses:(){},label:child,icon:Icon(Icons.add))
+    --OutlinedButton(
+    style: OutlinedButton.styleFrom(
+        backgroundColor: Colors.black,
+        primary: Colors.white,
+    
+++ Icon Buttons:
+    -- IconButton(onPressed(){},icon:Icon(Icons.name_of_icon))
+
+++ Buttons Attributes:
+    autofocus:true || false
+    style:ButtonStyle(
+        shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+          RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(18.0),
+            side: BorderSide(color: Colors.red)
+          )
+        )
+        backgroundColor:MaterialStateProperty.all(Colors.color_name),
+        foregroundColor:MaterialStateProperty.all(Colors.color_name),
+        padding:MaterialStateProperty.all(const EdgeInsets.all(value)),
+        elevation:MaterialStateProperty.all(value)-> make it flat if we put "0"
+        padding:MaterialStateProperty.all(const EdgeInsets.fromLTRB(left,top,right,bottom)),
+
+
+    )
+
+padding:EdgeInsets.fromLTRB(-,-,-,-
+
+
+enableBorder: OutlineInputButton(
+    borderSide:BorderSide(width:value,color:value_text),
+    borderRadius:BorderRadius.circular(value), 
+),
+
+)
+)
+++ icons:
+    icon:Icon(
+        Icons.name_of_icon,
+        color:Colors.name_of_color,
+        color:
+        size:
+
+
+    ),
+)
+
+
+
+screens :
+
+statelessWidget: Just Build The Screen One time Only But anycahnge It Dosen't Apper on it and just show the data dosen't show the change
+
+statefulWidget: can rebuild The Screen 
+it consists from two classes :
+- first class to provide widget
+- second class to provide the state from this widget
+class hussein extend StateFullWidget{ => do this is for widget so when action happens the state is created and return a a new build
+
+    @override 
+    _hussein createstate(){
+        return _hussein();
+    }
+}
+and in the state widget after this 
+
+class _hussein extends State<hussein>{
+
+
+    // init the state 
+
+    @override 
+    void initState()
+    {
+        super.initState() => initializing to the counter 
+    }
+}
+
+
+
+++ so after this we write SetState((){})
+to rebild the build function on the state widget to synce the change 
+
+
+++ if we want to control the width and the height of any widget we should put it on a container 
+
+++ https://www.udemy.com/course/complete-flutter-arabic/learn/lecture/25748190#overviewExpanded give to the current child on it the rest of the height or the width
+Expanede(
+    child:child
+)
+
+
+
+
+
++++ ApI Constructions :-
+ -- ApI is An intermediate between server and the client like page and the page database 
+ -- so when we deal with API we should have two commands that differ from each others
+ -------------------------POST------------------------------
+ -- first " POST " => on that we order the data or ansomething that i want to have and then get the data or have a reply to my order that is called (" Request ", " Respones ")
+ -- Request : asking for an order for example
+ -- Respones : is the results that i have from my Request 
+ -- in " POST " => we send the order on the " Request Body "
+-------------------------POST------------------------------
+
+
+ --------------------------GET--------------------------
+    -- in " GET " => we asking for the data and get the respones 
+    -- the different here is that we don't have to have a " Request Body " just Request
+    -- but we have a " Response Body " because we get a data
+ --------------------------GET--------------------------
+ ------------------------backend errors-------------------
+    ++ success in server in postman => 200 
+    ++ bad request => 400 
+    ++ internal server error => 500 (المشكله با اند)
+    ++ unauthorized => 401 (not allowed to enter)
+ ------------------------backend errors-------------------
+
+ ++ putdata :modufy all user details
+ ++ patchdata : modify specifi things not all user's details 
+ ++ deletedata : obviously deleting data
+
+
+ ----------------------dio on main.dart-----------
+ -- void main() async{
+    await DioHelper.init();
+    runApp();
+ }
+
+
+ +++ value.statusCode 
+ ++ inkwell : for making card clickable:
+ InkWell(
+    onTap(){}
+ ) 
+ 
+++ to give the textfield height we put " maxLines:value"
+
+
+
+++ view model we put bloc and put in it the cubit class for logic code
+++ shared preference if i want to stroe the data about accesstoken
+
+
+
+
+
+
++++ TextEditingController -> to have access to the textform data inside it 
+
+
+
+++ circleavatar(
+    radius:value,   
+    backgroundImage:NetworkImage("")
+    backgroundcolor:colors.v
+)
+
+++ SizedBox() => in column we put heitgh otherwise on rows we put width
+
+++ titlespacing
+
+
+
+for containers we use 
+=> decoration : BoxDecoration(
+    borderRadius:BorderRadius.circular(value),
+    color:Colors.value,
+    side:BorderSide(width:2,color:Colors.value)
+)
+
+
+in stack we alignment it using the following :
+++ alignment:AlignmentDirectional.bottomleft || start
+
+
+
+++ overflow:TextOverflow.ellipsis
+++ maxlines : value
+
+
+++ singlechildscrollview()
+++ scrollDirection : Axis.horizontal
+++ scrollDirection : Axis.vertical
+
+
+
+
+++ to access widgets from another folders for reusable it 
+
+=> Widget Name_of_method()=> Widget_name;
+
+
+
+
+listView.builder(
+    itemBuilder: (context,index) => widget(),
+    itemCounter:5 --> for specifying the number of items back
+)
+
+listView.seperated(
+    ScrollDirection:Axis.horizontal,
+    itemBuilder: (context,index) => widget(),
+    seperatedBuilder: (context,index) =>SizedBox(),
+    itemCounter:5 --> for specifying the number of items back
+)
+
+
+
+++ GestureDetector(
+    onTap(
+        SetState((){
+            // make an action
+        });
+    )
+)
+
+++ we use navigator to move from page to another 
+
+---> Navigator.push(
+    context,
+    MaterialPageRoute(
+        builder:(context) => next_named_page()
+    )
+)
